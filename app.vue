@@ -1,3 +1,6 @@
 <template>
-  <div><RouterView /></div>
+  <div>
+    <NavBar></NavBar>
+    <RouterView />
+  </div>
 </template>

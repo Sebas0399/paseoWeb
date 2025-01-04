@@ -9,8 +9,9 @@
 <script lang="ts" setup>
 import axios from "axios";
 async function submit() {
-  await axios.post("/api/users", {
+  await axios.post("http://localhost:9090/user", {
     name: "John Doe",
+    email:"algo.com",
     password: "123",
   });
 }

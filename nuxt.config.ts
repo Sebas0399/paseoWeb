@@ -4,9 +4,6 @@ import Aura from "@primevue/themes/aura";
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  runtimeConfig: {
-    MONGO_URI: process.env.MONGO_URI,
-  },
   modules: ["@primevue/nuxt-module"],
   primevue: {
     /* Configuration */
@@ -23,4 +20,8 @@ export default defineNuxtConfig({
       },
     },
   },
+  plugins: [
+    { src: '~/plugins/leaflet.client.ts', mode: 'client' }, // Registra el plugin para el cliente
+  ],
+  css: ['leaflet/dist/leaflet.css'], // Asegúrate de importar los estilos CSS de Leaflet
 });
